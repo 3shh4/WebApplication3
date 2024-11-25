@@ -5,7 +5,7 @@ namespace WebApplication3.Controllers;
 public class ContactController : Controller
 {
     private readonly IContactService _contactService;
-    
+
     public ContactController(IContactService contactService)
     {
         _contactService = contactService;
@@ -14,23 +14,23 @@ public class ContactController : Controller
     public IActionResult Index()
     {
         var contacts = _contactService.FindAll();
-        return View(contacts); 
+        return View(contacts);
     }
 
     public IActionResult Create()
     {
-        return View(); 
+        return View();
     }
 
     [HttpPost]
     public IActionResult Create(Contact contact)
     {
-        if (ModelState.IsValid) 
+        if (ModelState.IsValid)
         {
-            _contactService.Add(contact); 
-            return RedirectToAction("Index"); 
+            _contactService.Add(contact);
+            return RedirectToAction("Index");
         }
-        return View(contact); 
+        return View(contact);
     }
 
     public IActionResult Edit(int id)
@@ -38,9 +38,9 @@ public class ContactController : Controller
         var contact = _contactService.FindById(id);
         if (contact == null)
         {
-            return NotFound(); 
+            return NotFound();
         }
-        return View(contact); 
+        return View(contact);
     }
 
     [HttpPost]
@@ -48,10 +48,10 @@ public class ContactController : Controller
     {
         if (ModelState.IsValid)
         {
-            _contactService.Update(contact); 
+            _contactService.Update(contact);
             return RedirectToAction("Index");
         }
-        return View(contact); 
+        return View(contact);
     }
 
     public IActionResult Delete(int id)
@@ -59,7 +59,7 @@ public class ContactController : Controller
         var contact = _contactService.FindById(id);
         if (contact == null)
         {
-            return NotFound(); 
+            return NotFound();
         }
         return View(contact);
     }
@@ -67,7 +67,7 @@ public class ContactController : Controller
     [HttpPost, ActionName("Delete")]
     public IActionResult DeleteConfirmed(int id)
     {
-        _contactService.Delete(id); 
-        return RedirectToAction("Index"); 
+        _contactService.Delete(id);
+        return RedirectToAction("Index");
     }
-}   
+}

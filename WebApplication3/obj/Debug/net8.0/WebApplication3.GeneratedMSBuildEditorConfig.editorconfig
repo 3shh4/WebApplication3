@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\LENOVO\RiderProjects\WebApplication3\WebApplication3
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/LENOVO/RiderProjects/WebApplication3/WebApplication3/Views/account/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/RiderProjects/WebApplication3/WebApplication3/Views/account/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxyZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/RiderProjects/WebApplication3/WebApplication3/Views/Contact/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxjcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
