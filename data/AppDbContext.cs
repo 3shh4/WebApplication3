@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using data.Migrations;
+
+
 using System;
 
 public class AppDbContext : DbContext
@@ -24,4 +27,12 @@ public class AppDbContext : DbContext
             new ContactEntity() { Id = 2, Name = "Ewa", Email = "ewa@wsei.edu.pl", Phone = "293443823478", Birth = new DateTime(1999, 8, 10) }
         );
     }
+    public DbSet<User> Users { get; set; }
+
 }
+
+public class User
+{
+}
+
+
